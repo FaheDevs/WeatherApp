@@ -1,0 +1,30 @@
+app/appmeteo/AppMeteoCLI.java
+ app.appmeteo.AppMeteoCLI
+app/appmeteo/model/Temp.java
+ app.appmeteo.model.Temp
+app/appmeteo/AppMeteo.java
+ app.appmeteo.AppMeteo
+app/appmeteo/model/Current.java
+ app.appmeteo.model.Current
+app/appmeteo/model/Utilities.java
+ app.appmeteo.model.Utilities
+app/appmeteo/model/Weather.java
+ app.appmeteo.model.Weather
+app/appmeteo/model/Consumer.java
+ app.appmeteo.model.Consumer
+app/appmeteo/model/Authors.java
+ app.appmeteo.model.Authors
+app/appmeteo/model/City.java
+ app.appmeteo.model.City
+app/appmeteo/model/FeelsLike.java
+ app.appmeteo.model.FeelsLike
+app/appmeteo/model/PlayGround.java
+ app.appmeteo.model.PlayGround
+app/appmeteo/model/Daily.java
+ app.appmeteo.model.Daily
+app/appmeteo/model/PreviousDay.java
+ app.appmeteo.model.PreviousDay
+app/appmeteo/Tester.java
+ app.appmeteo.Tester
+app/appmeteo/controller/AppMeteoController.java
+ app.appmeteo.controller.AppMeteoController

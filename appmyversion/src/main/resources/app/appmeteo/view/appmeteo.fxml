@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#changeIcon" prefHeight="717.0" prefWidth="589.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.appmeteo.controller.AppMeteoController">
+   <children>
+      <GridPane fx:id="mainScene" layoutY="1.0" prefHeight="717.0" prefWidth="589.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="130.0" minWidth="10.0" prefWidth="99.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="302.0" minWidth="10.0" prefWidth="296.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="542.0" minWidth="10.0" prefWidth="184.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="137.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="299.0" minHeight="0.0" prefHeight="129.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="682.0" minHeight="10.0" prefHeight="122.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="682.0" minHeight="10.0" prefHeight="26.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="682.0" minHeight="0.0" prefHeight="63.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="682.0" minHeight="10.0" prefHeight="120.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="682.0" minHeight="10.0" prefHeight="248.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="682.0" minHeight="10.0" prefHeight="72.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <ImageView fitHeight="78.0" fitWidth="93.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+            <Label fx:id="settingsBtn" onMouseClicked="#toggleScenes" text="SETTINGS" GridPane.valignment="TOP">
+               <GridPane.margin>
+                  <Insets left="20.0" top="10.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="weatherIcon" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="TOP">
+               <image>
+                  <Image url="@img/sunny.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="degreeLabel" prefHeight="106.0" prefWidth="150.0" text="  21°C" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" />
+            <Text fx:id="closeButton" onMouseClicked="#closeProgram" opacity="0.56" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="close" text="X" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
+               <font>
+                  <Font size="22.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets right="20.0" top="14.0" />
+               </GridPane.margin>
+            </Text>
+            <ComboBox fx:id="comboBox" focusTraversable="false" nodeOrientation="RIGHT_TO_LEFT" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </ComboBox>
+            <DatePicker fx:id="datePicker" focusTraversable="false" prefHeight="26.0" prefWidth="103.0" showWeekNumbers="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="BOTTOM" />
+            <Label text="Location: " GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="10.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Date: " GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="BOTTOM">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="feelsLikeLabel" text="Feels Like   28°C" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" />
+            <TabPane fx:id="tabPane" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" GridPane.columnSpan="3" GridPane.rowIndex="5" GridPane.rowSpan="2">
+              <tabs>
+                <Tab text="Weather Data#1">
+                  <content>
+                    <AnchorPane fx:id="pane1" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Text fill="#ff0505" layoutX="88.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Weather Data for the app">
+                                 <font>
+                                    <Font size="29.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Weather Data#2">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Text fill="#1d469e" layoutX="70.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Again More Weather Data for the app" wrappingWidth="407.005859375">
+                                 <font>
+                                    <Font size="31.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab text="Weather Data#3">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Text fill="#26ae26" layoutX="24.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Last info to be reported for this day">
+                                 <font>
+                                    <Font size="26.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+              </tabs>
+               <GridPane.margin>
+                  <Insets left="12.0" right="20.0" top="20.0" />
+               </GridPane.margin>
+            </TabPane>
+         </children>
+      </GridPane>
+      <GridPane fx:id="settingsScene" alignment="CENTER" layoutX="-5.0" layoutY="146.0" onKeyPressed="#addCityByEnter" prefHeight="717.0" prefWidth="589.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="188.0" minWidth="0.0" prefWidth="76.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="486.0" minWidth="10.0" prefWidth="432.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="125.0" minWidth="10.0" prefWidth="75.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="404.0" minHeight="10.0" prefHeight="97.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="404.0" minHeight="10.0" prefHeight="62.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="404.0" minHeight="10.0" prefHeight="88.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="486.0" minHeight="10.0" prefHeight="417.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="232.0" minHeight="0.0" prefHeight="53.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Text fx:id="closeButton1" onMouseClicked="#closeProgram" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="close" text="X" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
+               <font>
+                  <Font size="22.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets right="26.0" top="10.0" />
+               </GridPane.margin>
+            </Text>
+            <Text fill="#f80000" strokeType="OUTSIDE" strokeWidth="0.0" text="ERROR MESSAGE GOES HERE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+            <HBox alignment="CENTER_RIGHT" prefHeight="60.0" prefWidth="478.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <Button fx:id="addCityBtn" mnemonicParsing="false" onMouseClicked="#addCity" text="ADD CITY">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Button>
+                  <TextField fx:id="cityInput" alignment="CENTER" prefHeight="37.0" prefWidth="303.0" promptText="ENTER CITY NAME" HBox.hgrow="NEVER">
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Helvetica‭ ‬עבה" size="18.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <VBox fx:id="citiesBox" prefHeight="200.0" prefWidth="100.0" stylesheets="@appmeteo.css" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Text fill="#0a0a0a" fontSmoothingType="LCD" opacity="0.77" strokeType="OUTSIDE" strokeWidth="0.0" text="SETTINGS" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+               <font>
+                  <Font size="22.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets top="10.0" />
+               </GridPane.margin>
+            </Text>
+            <Label fx:id="backBtn" onMouseClicked="#toggleScenes" text="BACK" GridPane.columnSpan="2" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+               <font>
+                  <Font size="12.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="20.0" top="10.0" />
+               </GridPane.margin>
+            </Label>
+         </children>
+         <stylesheets>
+            <URL value="@appmeteo.css" />
+            <URL value="@appmeteo.css" />
+         </stylesheets>
+      </GridPane>
+   </children>
+</AnchorPane>

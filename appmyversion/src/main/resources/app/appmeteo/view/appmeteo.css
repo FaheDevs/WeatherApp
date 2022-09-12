@@ -1,0 +1,344 @@
+
+/*@font-face {*/
+/*    src:url("/app/appmeteo/view/fonts/Helvetica.ttf");*/
+/*}*/
+.root{
+
+
+    -fx-font-family: Helvetica;
+    -fx-font-smoothing-type: gray;
+
+
+    -fx-background-color: #c0fffb;
+
+    -fx-background-radius: 30;
+    -fx-border-radius: 30;
+    -fx-border-width:5;
+}
+
+
+
+.close{
+    -fx-opacity: .3;
+}
+.close:hover{
+    -fx-opacity: 1;
+}
+Button{
+
+    -fx-background-color: rgba(111, 109, 109, 0.5);
+    -fx-padding: 7 7 7 7;
+    -fx-text-fill: white;
+    /*-fx-font-size: 12px;*/
+    -fx-border-color: black;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-background-insets: 2px;
+
+    -fx-border-width:2;
+    -fx-font-weight: bold;
+    -fx-opacity: .7;
+
+
+
+}
+Button:hover{
+
+
+    -fx-background-color: rgba(146, 146, 187,1);
+    -fx-opacity: 1;
+
+
+}
+
+#settingsBtn{
+    -fx-opacity: .7;
+    -fx-font-size: 14;
+    -fx-text-fill: #766f6f;
+}
+#settingsBtn:hover{
+    -fx-opacity: 1;
+    -fx-text-fill: black;
+
+}
+
+#backBtn{
+    -fx-opacity: .7;
+    -fx-font-size: 14;
+    -fx-text-fill: #766f6f;
+}
+#backBtn:hover{
+    -fx-opacity: 1;
+    -fx-text-fill: black;
+
+}
+#degreeLabel{
+    -fx-font-size: 50px;
+}
+
+
+#mainScene{
+
+    -fx-background-radius: 30;
+    -fx-border-radius: 30;
+    -fx-border-width:5;
+
+
+    -fx-background-insets: 3px;
+
+    -fx-border-color: rgba(57, 53, 53, 0.39);
+    -fx-border-style: solid;
+
+
+    -fx-background-color: linear-gradient(to top, rgba(149, 255, 255, 0.35), #ffffff);
+
+
+}
+
+
+
+#settingsScene{
+    -fx-background-radius: 30;
+    -fx-border-radius: 30;
+    -fx-border-width:5;
+    -fx-background-insets: 3px;
+
+    -fx-border-color: rgba(57, 53, 53, 0.39);
+    -fx-border-style: solid;
+    /*-fx-background-color: rgba(0, 0, 0, .50);*/
+    -fx-background-color: linear-gradient(to top, rgba(149, 255, 255, 0.35), #ffffff);
+
+
+}
+
+#cityInput  {
+    -fx-effect: innershadow( gaussian, rgba( 0, 0, 0, 0.5 ), 10, .3, 1, 1 );
+    -fx-background-color: rgba(188, 212, 210, 0.43);
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-border-color: rgba(187, 180, 180, 0.77);
+    -fx-border-style: solid;
+    -fx-border-width: 2px;
+    -fx-text-fill: black;
+}
+#cityInput:focused  {
+    -fx-background-color: rgb(255, 255, 255);
+}
+#addCityBtn{
+    -fx-effect: innershadow( gaussian, rgba( 0, 0, 0, 0.9 ), 10, .2, 2, 2 );
+    -fx-font-size: 16px;
+    -fx-background-color: #1F5673;
+    -fx-opacity: .7;
+    -fx-border-width: 2px;
+    -fx-border-style: solid;
+    -fx-background-insets: 2px;
+
+    -fx-border-color: rgb(0, 0, 0);
+}
+#addCityBtn:hover{
+    -fx-background-color: green;
+    -fx-text-fill: black;
+    -fx-opacity: 1;
+}
+
+
+
+#citiesList .list-cell {
+    -fx-alignment: center;
+}
+
+#citiesBox {
+    -fx-background-color: rgba(132, 169, 194, 0.44);
+    -fx-effect: dropshadow( gaussian , rgba(0, 0, 0, 0.66), 0,0,0,1 );
+
+
+    -fx-background-radius: 20px;
+
+    -fx-border-radius: 20px;
+    -fx-border-width: 2px;
+    -fx-border-color: #D6E2EB;
+    -fx-padding: 10px;
+    -fx-spacing: 10px;
+
+
+
+}
+
+#citiesBox HBox {
+    -fx-background-color:#D6E2EB;
+    -fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );
+    -fx-background-radius: 20px;
+    -fx-max-height: 20px;
+    -fx-padding: 7 7 7 7;
+
+    -fx-border-radius: 20px;
+    -fx-border-width: 1px;
+    -fx-border-color: white;
+
+    -fx-alignment: center-right;
+    -fx-fill-height: true;
+    -fx-spacing: 150px;
+    -fx-opacity: .92;
+
+;
+
+
+
+
+
+}
+#citiesBox HBox:hover {
+    /*-fx-border-width: 3px;*/
+    -fx-opacity: 1;
+
+    -fx-background-color: rgba(135, 186, 151, 0.8);
+
+}
+
+#citiesBox HBox Text{
+    /*-fx-end-margin: 20px;*/
+    /*-fx-start-margin: 20px;*/
+    /*-fx-padding: 50px;*/
+    -fx-alignment: center;
+    -fx-background-color: yellow;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+
+}
+
+#citiesBox HBox Button{
+
+
+    -fx-effect: innershadow( gaussian, rgba( 0, 0, 0, 0.5 ), 10, .1, 1, 1 );
+
+    -fx-background-color: rgba(111, 109, 109, 0.5);
+    -fx-padding: 5 5 5 5;
+    -fx-text-fill: white;
+    -fx-min-width: 120px;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+    -fx-border-width:2px;
+    -fx-background-insets: 2px;
+
+    -fx-border-style: solid;
+    -fx-border-color: black;
+    -fx-opacity: 0.6;
+
+
+
+
+
+}
+#citiesBox HBox Button:hover{
+    -fx-background-color: rgba(255, 6, 6, 0.9);
+    -fx-opacity: 1;
+    -fx-border-style: solid;
+}
+
+
+
+
+#comboBox
+{
+
+}
+.combo-box{
+
+    -fx-background-color: transparent;
+    -fx-font-size: 16;
+    -fx-border-color: rgba(0, 0, 0, 0.65);
+    -fx-border-style: solid;
+    -fx-border-width: 1px;
+    -fx-border-radius: 10px;
+
+
+
+
+}
+
+.combo-box .list-cell{
+    -fx-alignment: center;
+    -fx-text-fill: black;
+}
+.combo-box .list-cell:hover{
+    -fx-background-color: rgba(0, 0, 0, 0.16);
+}
+.combo-box  .arrow-button .arrow{
+    -fx-background-color: rgba(72, 78, 80, .7);
+    -fx-padding: 0px 15px 15px 0px;
+
+}
+
+.label{
+
+    -fx-font-size: 20px;
+
+}
+#feelsLikeLabel{
+    -fx-font-size: 14px;
+}
+
+
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-opacity: 0;
+}
+
+.tab-pane
+{
+    -fx-tab-min-width:90px;
+
+
+}
+
+
+.tab-pane .tab
+{
+    /*-fx-background-color: #615151;*/
+    -fx-background-color: transparent;
+    -fx-pref-width: 180px;
+    -fx-border-width:0 0 4 0;
+
+    -fx-border-style:  solid;
+    -fx-border-color: rgba(26, 26, 38, 0.17);
+    -fx-alignment: center;
+
+
+
+
+}
+
+.tab-pane .tab:selected
+{
+    /*-fx-background-color: #3c3c3c;*/
+    -fx-background-color: transparent;
+    -fx-focus-color: transparent;
+    -fx-border-radius: 5 5 0 0;
+    -fx-border-width:4 4 0 4;
+
+    -fx-border-style: solid;
+    -fx-border-color: rgba(26, 26, 38, 0.17);
+
+
+}
+
+.tab .tab-label {
+    -fx-alignment: center;
+    -fx-text-fill: rgba(0, 0, 0, 0.82);
+    /*-fx-font-family: Verdana;*/
+    -fx-font-size: 18px;
+    /*-fx-font-weight: bold;*/
+
+}
+
+.tab:selected .tab-label {
+    -fx-text-fill: rgba(0, 0, 0, 0.97);
+
+}
+
+
+.tab-pane > .tab-header-area > .headers-region > .tab > .tab-container > .tab-label {
+    -fx-alignment: CENTER;
+    -fx-pref-width: 150.0;
+}
+
+
